@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 @font-face {
     font-family: LatinSmall;
     src: asset-url('LatinSmall.ttf');
@@ -33,3 +34,5 @@ body {padding-top: 81px;}
 	min-height: 250px;
 	background: asset-url('cover.jpg') no-repeat center center fixed;
 }
+
+.row.icons { font-size: 4em;}
