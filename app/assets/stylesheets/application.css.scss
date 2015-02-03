@@ -1,0 +1,35 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@font-face {
+    font-family: LatinSmall;
+    src: asset-url('LatinSmall.ttf');
+}
+/* Header */
+body {padding-top: 81px;}
+.navbar { 
+	margin-bottom: 0;
+	background: white;
+	.navbar-nav li a {
+		line-height: 50px;
+		color: black;
+	}
+
+	.navbar-toggle {
+		border: 1px solid #888;
+		margin-top: 20px;
+		.icon-bar { background: #888; }
+	}
+}
+.logo-fergasa {
+
+	height: auto;
+
+	img {display: inline-block;}
+
+	span {font-family: LatinSmall; font-size: 50px; vertical-align: middle; color: black; margin-left: 6px}
+}
+
+.cover {
+	min-height: 250px;
+	background: asset-url('cover.jpg') no-repeat center center fixed;
+}
