@@ -2,6 +2,10 @@
 
 <%= render partial: "us" %>
 
+<%= render partial: "products" %>
+
+<%= render partial: "contact" %>
+
 
 <script>
       // Scrolls to the selected menu item on the page
@@ -13,7 +17,7 @@
 	              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 	              if (target.length) {
 	                  $('html,body').animate({
-	                      scrollTop: target.offset().top -10
+	                      scrollTop: target.offset().top -80
 	                  }, 1000);
 	                  // return false;
 	              }
