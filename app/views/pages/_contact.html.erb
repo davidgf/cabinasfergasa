@@ -37,35 +37,52 @@
           </div>
           <div class="panel-body">
             <%= form_tag({controller: 'pages', action: 'contact'}, method: :post, class: "form-horizontal") do |f| %>
+              <%= fields_for :message do |ff| %>
               <div class="form-group">
-                <%= label_tag :name, "Nombre", class: 'control-label col-sm-2' %>
+                <%= ff.label :name, "Nombre", class: 'control-label col-sm-2' %>
 
                 <div class="col-sm-10">
-                  <%= text_field_tag :name, "", class: 'form-control', placeholder: 'Nombre' %>
+                  <%= ff.text_field :name, class: 'form-control', placeholder: 'Nombre' %>
                 </div>
               </div>
               <div class="form-group">
-                <%= label_tag :email, "Email", class: 'control-label col-sm-2' %>
+                <%= ff.label :email, "Email", class: 'control-label col-sm-2' %>
 
                 <div class="col-sm-10">
-                  <%= text_field_tag :email, "", type: "email", class: 'form-control', placeholder: 'Email' %>
+                  <%= ff.text_field :email, type: "email", class: 'form-control', placeholder: 'Email' %>
                 </div>
               </div>
               <div class="form-group">
-                <%= label_tag :subject, "Asunto", class: 'control-label col-sm-2' %>
+                <%= ff.label :subject, "Asunto", class: 'control-label col-sm-2' %>
 
                 <div class="col-sm-10">
-                  <%= text_field_tag :subject, "", class: 'form-control', placeholder: 'Asunto' %>
+                  <%= ff.text_field :subject, class: 'form-control', placeholder: 'Asunto' %>
                 </div>
               </div>
               <div class="form-group">
-                <%= label_tag :content, 'Mensaje', class: 'control-label col-sm-2' %>
+                <%= ff.label :content, 'Mensaje', class: 'control-label col-sm-2' %>
 
                 <div class="col-sm-10">
-                  <%= text_area_tag :content, "", class: 'form-control', placeholder: 'Mensaje', rows: 6 %>
+                  <%= ff.text_area :content, class: 'form-control', placeholder: 'Mensaje', rows: 6 %>
                 </div>
               </div>
+
+              <div id="errorFormulario" class="alert alert-danger hidden">
+                <strong>Lo sentimos</strong> <span>Algo ha ido mal. Inténtelo de nuevo más tarde.</span>
+              </div>
+
+              <div id="faltanDatosFormulario" class="alert alert-danger hidden">
+                <strong>Introduzca su email</strong> <span>Por favor, introduzca su dirección de correo electrónico amtes de enviar tus datos.</span>
+              </div>
+              <div id="enviandoFormulario" class="alert alert-warning hidden">
+                <strong>Enviando...</strong>
+              </div>
+              <div id="okFormulario" class="alert alert-success hidden">
+                <strong>Enviado</strong> <span>Muchas gracias por contactar con nosotros. Nos pondremos en contacto con usted lo antes posible.</span>
+              </div>
+
               <%= submit_tag 'Enviar', class: 'btn btn-default' %>
+              <% end %>
             <% end %>
           </div>
         </div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Solicitud de información de Fergasa</h1>
+    <p>
+      Nombre: <%= @message_params[:name] %>
+    </p>
+    <p>
+      Email: <%= @message_params[:email] %>
+    </p>
+    <p>
+      Asunto: <%= @message_params[:subject] %>
+    </p>
+    <p>
+      Mensaje: <%= @message_params[:content] %>
+    </p>
+  </body>
+</html>
