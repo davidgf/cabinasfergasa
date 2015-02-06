@@ -109,3 +109,5 @@ build/
 .rvmrc
 
 config/app_config.yml
+Capfile
+config/deploy*
