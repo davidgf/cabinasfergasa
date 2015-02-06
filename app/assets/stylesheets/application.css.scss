@@ -5,6 +5,7 @@
     font-family: LatinSmall;
     src: asset-url('LatinSmall.ttf');
 }
+$blue-fergasa: rgba(21, 97, 154, 1);
 /* Header */
 body {padding-top: 81px;}
 .navbar { 
@@ -32,14 +33,33 @@ body {padding-top: 81px;}
 
 .cover {
 	min-height: 250px;
-	background: asset-url('cover.jpg') no-repeat center center fixed;
+	background: asset-url('cover.jpg') no-repeat center center;
+	background-size: cover;
 }
 
 .row.icons { font-size: 4em;}
 
 section#features{
-	background: rgba(21, 97, 154, 1);
+	background: $blue-fergasa;
 	color: white;
 	padding: 50px 0;
 	margin: 20px 0;
+}
+
+.panel-heading { 
+	background-color: $blue-fergasa !important;
+	color: white !important;
+}
+
+.panel {
+	border-color: $blue-fergasa;
+}
+
+footer {
+	background-color: $blue-fergasa;
+	padding: 30px 0;
+	margin-top: 30px;
+	color: white;
+
+	a {color: white}
 }
